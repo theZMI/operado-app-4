@@ -1,0 +1,95 @@
+// Блок данных
+.data-block {
+  margin: 0 auto 30px auto;
+  padding: 0;
+  border: 1px solid #DDD;
+  .m-border-radius(@border-radius-base);
+  position: relative;
+  display: block;
+
+  > .head {
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #DDD;
+    border-right: 1px solid #DDD;
+    padding: 5px 6px 4px 6px;
+    margin: 0;
+    .m-text-shadow(rgba(255, 255, 255, 0.3));
+    .m-border-radius(0 0 @border-radius-small 0);
+    line-height: 1;
+    .font-standart;
+    letter-spacing: 0;
+    word-spacing: 1px;
+    font-size: 15px;
+    z-index: 1;
+
+    &-right {
+      left: auto;
+      right: 0;
+      border-right: 0;
+      border-left: 1px solid #DDD;
+      .m-border-radius(0 0 0 @border-radius-small);
+    }
+  }
+
+  > .body {
+    line-height: 1.65;
+    font-size: 15px;
+    padding: 40px 20px 17px 20px;
+    .m-border-radius(@border-radius-small);
+
+    &-without-spaces {
+      padding: 0;
+
+      > table {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &-without-bottom-margin {
+    margin-bottom: 0;
+  }
+
+  &-dark {
+    border-color: #000;
+
+    > .head {
+      border-color: #555;
+      color: #DDD;
+      .m-text-shadow(#000);
+
+      &-right {
+        border-color: #555;
+      }
+    }
+
+    > .body {
+      background: #000;
+      color: #DDD;
+      .m-text-shadow(#000);
+
+      hr {
+        border-top-color: #333;
+      }
+    }
+  }
+
+  &-without-borders {
+    border: none 0;
+
+    > .body {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &-as-link {
+    color: #333;
+
+    &.data-block-dark {
+      color: #DDD;
+    }
+  }
+}

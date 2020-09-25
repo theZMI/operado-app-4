@@ -1,0 +1,1406 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr" class='is-usually-page'>
+<head>
+    
+    <!-- Document charset -->
+    <meta charset="utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <!-- IE render mode -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1"/>
+
+    <!-- SEO -->
+    <title>Operado - ремонт бытовой техники</title>
+    <meta name="apple-mobile-web-app-title" content="Operado"/>
+            <meta name="description" content="Operado - Заказать ремонт бытовой техники теперь так же просто, как вызвать такси!"/>
+                <meta name="keywords" content="Operado, Операдо, Ремонт бытовой техники, Ремонт бытовой техники на дому, Ремонт газовых котлов, Ремонт газовых котлов в Калининграде"/>
+    
+    <!-- Off cache for requests -->
+    <meta http-equiv="Cache-Control" content="no-cache"/>
+
+    <!-- View at mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui, min-width=320"/>
+    
+    <meta name="MobileOptimized" content="320"/>
+    <meta name="HandheldFriendly" content="true"/>
+
+    <!-- Base tag for links -->
+    <base href="/">
+
+    <!-- Favicon -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+    <!-- Application icon for IOS dashboard -->
+    <link rel="apple-touch-icon" href="i/image/touch_icon/180x180.png"/>
+
+    <!-- Clear fonts for windows -->
+    <meta http-equiv="cleartype" content="on"/>
+
+    <script type="text/javascript">
+        var API_ROOT_URL = 'https://operado.ru/api/public/api/v1.0/';
+    </script>
+    <!-- Место вставки склеиных и спаковынных js/css файлов -->
+    <!-- extraPackerJs --><script type="text/javascript" charset="UTF-8" src="js/all.js"></script>
+    <!-- extraPackerCss --><link rel="stylesheet" charset="UTF-8" type="text/css" href="css/all.css" />
+
+    <link media="screen" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&subset=latin,cyrillic"/>
+    <link media="screen" rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow&subset=latin,cyrillic"/>
+
+    <!--[if lt IE 9]>
+        <script src="i/js/_dev/html5shiv.js"></script>
+        <script src="i/js/_dev/respond.min.js"></script>
+    <![endif]-->
+
+    <!--[if IE]>
+        <script src="i/js/_dev/excanvas.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+        var isModalWndOpen = false;
+
+        $(document).ready
+        (
+            function () {
+                $('*[data-toggle="lightbox"]').each(function () {
+                    var oldHref = $(this).attr("href");
+                    var re = /is_ajax=0/gi;
+                    var newHref = oldHref.replace(re, 'is_ajax=1');
+                    $(this).attr("href", newHref);
+                });
+
+                $(document).delegate
+                (
+                    '*[data-toggle="lightbox"]',
+                    'click',
+                    function (event) {
+                        event.preventDefault();
+                        $(this).ekkoLightbox({
+                            alwaysShowClose: true,
+                            onShow: function () {
+                                isModalWndOpen = true;
+                                $('html').css('overflow-y', 'hidden');
+                            },
+                            onHide: function () {
+                                isModalWndOpen = false;
+                                $('html').css('overflow-y', 'auto');
+                            }
+                        });
+                    }
+                );
+            }
+        );
+    </script>
+
+    <script type='text/javascript'>
+        g_phoneMask = {
+            mask: '+{7}(000)000-00-00'
+        };
+
+        g_numberMask = {
+            mask: Number,
+            thousandsSeparator: '',
+            radix: ','
+        };
+
+        function InputMasksInit() {
+            $('.phone-mask').each(
+                function () {
+                    new IMask(
+                        $(this).get(0),
+                        g_phoneMask
+                    );
+                }
+            );
+
+            $('.money-mask, .number-mask').each(
+                function () {
+                    new IMask(
+                        $(this).get(0),
+                        g_numberMask
+                    );
+                }
+            );
+        }
+
+        $(
+            function () {
+                InputMasksInit();
+            }
+        );
+    </script>
+    
+    <script type="text/javascript">
+        $(function () {
+            $(".table-sorted").tablesorter();
+        });
+    </script>
+    
+    <!-- Accept fullscreen mode for PWA -->
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="mobile-web-app-capable" content="yes"/>
+
+    <!-- Style for top status bar -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+    <!-- Tab color for Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000000"/>
+
+    <!-- Tab color for Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4285f4"/>
+
+    <!-- Disables automatic detection of possible phone numbers in a webpage in Safari on iOS -->
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="format-detection" content="address=no"/>
+
+    <!-- Open links in current window -->
+
+    <!-- Startup image for IOS -->
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="i/image/startup_images/1136x640.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="i/image/startup_images/2436x1125.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="i/image/startup_images/1792x828.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="i/image/startup_images/828x1792.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="i/image/startup_images/1334x750.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="i/image/startup_images/1242x2688.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="i/image/startup_images/2208x1242.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="i/image/startup_images/1125x2436.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 736px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait)"
+        href="i/image/startup_images/1242x2208.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="i/image/startup_images/2732x2048.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 414px) and (device-height: 896px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape)"
+        href="i/image/startup_images/2688x1242.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="i/image/startup_images/2224x1668.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 375px) and (device-height: 667px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="i/image/startup_images/750x1334.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="i/image/startup_images/2048x2732.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="i/image/startup_images/2388x1668.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1112px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="i/image/startup_images/1668x2224.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="i/image/startup_images/640x1136.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="i/image/startup_images/1668x2388.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: landscape)"
+        href="i/image/startup_images/2048x1536.png"
+    />
+    <link
+        rel="apple-touch-startup-image"
+        media="screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) and (orientation: portrait)"
+        href="i/image/startup_images/1536x2048.png"
+    />
+
+    <script type="text/javascript">
+        let logoBlock = new LogoBlock();
+
+        $(function () {
+            logoBlock.init();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var requestForm = new RequestForm();
+
+        $(function () {
+            requestForm.init(ymaps);
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+            var form_file_1 = $('#i-upl-form-file_1');
+            var uplInput_file_1 = $('#i-upl-form-file_1 input[type="file"]');
+            var progress_file_1 = $('#i-upl-form-file_1 .progress-wrapper');
+            var bar_file_1 = $('#i-upl-form-file_1 .progress .progress-bar');
+
+            function SetFileUplProgress_file_1(percentVal) {
+                bar_file_1.width(percentVal);
+                bar_file_1.attr('aria-valuenow', percentVal);
+                bar_file_1.html(percentVal);
+            }
+
+            function DeleteUploadFile_file_1() {
+                SetFileUplProgress_file_1('0%');
+                $('input[name="file_1_rdy_name"]').val('');
+                uplInput_file_1.show();
+                progress_file_1.hide();
+            }
+
+            $("#i-ajax-form-file_1-button-image-delete button").on("click", function () {
+                DeleteUploadFile_file_1();
+            });
+            $("#i-ajax-form-file_1-button-image-refresh button").on("click", function () {
+                DeleteUploadFile_file_1();
+            });
+
+            form_file_1.ajaxForm({
+                beforeSend: function () {
+                    uplInput_file_1.hide();
+                    progress_file_1.show();
+                    SetFileUplProgress_file_1('0%');
+                },
+                uploadProgress: function (event, position, total, percentComplete) {
+                    var percentVal = percentComplete + '%';
+                    SetFileUplProgress_file_1(percentVal);
+                },
+                success: function () {
+                    var percentVal = '100%';
+                    SetFileUplProgress_file_1(percentVal);
+                },
+                complete: function (xhr) {
+                    SetFileUplProgress_file_1('100%');
+                    var json = null;
+                    var isValidJson = false;
+                    try {
+                        json = $.parseJSON(xhr.responseText);
+                        isValidJson = true;
+                    } catch (err) {
+                        isValidJson = false;
+                    }
+                                        $('#i-ajax-form-file_1-button-image-delete').hide();
+                    $('#i-ajax-form-file_1-button-image-refresh').hide();
+                    bar_file_1.removeClass('progress-bar-danger');
+                    if (isValidJson && json.success) {
+                        $('input[name="file_1_rdy_name"]').val(json.fileName);
+                                                $('#i-ajax-form-file_1-button-image-delete').show();
+                                            } else {
+                        bar_file_1.addClass('progress-bar-danger');
+                        $('#i-ajax-form-file_1-button-image-refresh').show();
+                        var errorMessage = "<span style='display: block; font-weight: normal' class='text-overflow'>" + json.errors + "</span>";
+                        SetFileUplProgress_file_1(errorMessage);
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        $(function () {
+            var firework = JS_FIREWORKS.Fireworks({
+                id: 'i-engineer-found-block_canvas',
+                hue: 120,
+                particleCount: 50,
+                delay: 0,
+                minDelay: 20,
+                maxDelay: 40,
+                boundaries: {
+                    top: 50,
+                    bottom: 240,
+                    left: 50,
+                    right: 590
+                },
+                fireworkSpeed: 2,
+                fireworkAcceleration: 1.05,
+                particleFriction: 0.95,
+                particleGravity: 1.5
+            });
+            firework.start();
+        });
+    </script>
+
+    <script>
+        $(function () {
+            var firework = JS_FIREWORKS.Fireworks({
+                id: 'i-request-done_canvas',
+                hue: 120,
+                particleCount: 50,
+                delay: 0,
+                minDelay: 20,
+                maxDelay: 40,
+                boundaries: {
+                    top: 50,
+                    bottom: 240,
+                    left: 50,
+                    right: 590
+                },
+                fireworkSpeed: 2,
+                fireworkAcceleration: 1.05,
+                particleFriction: 0.95,
+                particleGravity: 1.5
+            });
+            firework.start();
+        });
+    </script>
+
+    <script>
+        function SetRating(value) {
+            requestForm.setRating(value);
+        }
+    </script>
+</head>
+<body id="web-pull-to-refresh">
+<a href="#content" class="sr-only">Перейти к содержимому страницы</a>
+
+
+
+<div id="ptr">
+    <div class="pull-notificator">
+        <span class="fa fa-refresh"></span>
+    </div>
+    <div class="pull-loading">
+        <span class="fa fa-refresh ptr-loading-icon"></span>
+        <span class="ptr-loading-pulling-percent"></span>
+    </div>
+</div>
+
+
+<div class="site-menu-overwrite" id="main-menu-wrapper"></div>
+
+<div id="wrapper">
+    <div id="content">
+        
+<div class="logo-block">
+    <a href="/" class="logo-block_logo"></a>
+    <div class="logo-block_slogan">
+        <span>
+                            <strong>Заказать ремонт бытовой техники</strong> теперь так же просто, как вызвать такси!
+                    </span>
+    </div>
+</div>
+
+
+<div class="modal notice-modal fade" id="cancelRequestModal" tabindex="-1" role="dialog" aria-labelledby="cancelRequestModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-body text-center">
+
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+                <form id="request-form_cancel-request" class="request-form_cancel-request by-center-of-modal-window" novalidate>
+                    <input type="hidden" name="request_id" value="">
+                    <input type="hidden" name="status" value="-20">
+                    <br>
+                    <div class="notice-modal_icon">
+                        <span class="fa fa-exclamation-triangle text-primary"></span>
+                    </div>
+                    <br>
+                    <div class="notice-modal_header">
+                        Отменить ваш текущий заказ?
+                    </div>
+                    <div class="notice-modal_info"></div>
+                    <div class="notice-modal_actions">
+                        <button type="button" class="btn btn-link btn-lg" id="request-form_cancel-request_cancel-btn" data-dismiss="modal">Нет</button>
+                        &nbsp;
+                        <button type="submit" class="btn btn-primary btn-lg btn-rounded">
+                            <span class="fa fa-check icon-left"></span>Да
+                        </button>
+                    </div>
+                    <br>
+                </form>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container std-wrapper request-form many-panels-form_scroll-anchor" data-offset="top-of-page">
+    <div class="std-wrapper_body std-wrapper_body_with-vertical-spacing">
+        <div class="row">
+            <div class="col-xs-12">
+
+                <div id="request-form_loader">
+                    <div class="loading-block">
+                        <img src="i/image/load.gif" alt="Loading..." />
+                    </div>
+                </div>
+
+                <div id="many-panels-form-panel_cancel_success" class="hidden one-panel">
+                    <div class="text-center">
+    <div class="notice-modal_icon">
+        <span class="fa fa-check-circle text-success"></span>
+    </div>
+    <div class="notice-modal_header">
+        Заказ отменен
+    </div>
+    <div class="notice-modal_info">
+        <p>Ваш заказ успешно отменен</p>
+    </div>
+    <div class="space-separator-15"></div>
+    <div class="notice-modal_actions">
+        <a href="/" class="btn btn-primary btn-lg btn-min-width btn-rounded button-with-timer" id="i-request-form-cancel-success-button">
+            <span class="fa fa-check icon-left"></span>OK<span class="notice-modal_timer button-with-timer_timer" id="i-request-form-cancel-success-button-timer">00:10</span>
+        </a>
+    </div>
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_1" class="hidden one-panel">
+                    <form id="request-form_step-1" novalidate>
+    <input type="hidden" name="request_id" value="">
+    <fieldset class="b3-one-group b3-one-group-last">
+        <legend>
+            <span class="b3-one-group-head">
+                Что надо починить?
+            </span>
+        </legend>
+        <div class="b3-one-group-body request-form_step-with-max-width">
+            <div class="form-group">
+                <label for="i-category" class="sr-only">Техника</label>
+                <input type="text" class="form-control" id="i-category" name="category"/>
+                <div class="form-group">
+                    <input type="text" class="form-control hidden" name="category_for_validator" required data-error="Выберите категорию вашего оборудования"/>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="i-mark" class="sr-only">Марка</label>
+                <input type="text" class="form-control" id="i-mark" name="mark"/>
+            </div>
+            <div class="form-group">
+                <label for="i-model" class="sr-only">Модель</label>
+                <input type="text" class="form-control" id="i-model" name="model"/>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="is_planned_services" class="js-switch"/>
+                    &nbsp;
+                    <span class="hidden-xs">Мне нужно плановое обслуживание, а не срочный ремонт</span>
+                    <span class="hidden-sm hidden-md hidden-lg">У меня плановое обслуживание</span>
+                </label>
+            </div>
+        </div>
+    </fieldset>
+    <div class="prev-next-buttons">
+        <button class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded" type="submit">
+            Далее<span class="fa fa-chevron-right icon-right"></span>
+        </button>
+    </div>
+</form>
+                </div>
+
+                <div id="many-panels-form-panel_2" class="hidden one-panel">
+                    <form id="request-form_step-2" novalidate>
+    <input type="hidden" name="request_id" value="">
+    <fieldset class="b3-one-group b3-one-group-last">
+        <legend>
+            <span class="b3-one-group-head">
+                <span class="badge">Шаг 2 из 5</span>
+                &nbsp;
+                Опишите проблему:
+            </span>
+        </legend>
+        <div class="b3-one-group-body request-form_step-with-max-width">
+            <div class="form-group">
+                <label for="i-problem" class="sr-only">Проблема</label>
+                <textarea class="form-control" id="i-problem" name="problem" rows="4" required data-error="Опишите проблему с вашим оборудованием"></textarea>
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="request-form_upload-form">
+                <input type="hidden" name="file_1_rdy_name">
+                <button type="button" class="request-form_button-upload-file btn btn-link btn-without-left-padding btn-without-right-padding btn-without-bottom-padding btn-without-top-padding">
+                    <span class="fa fa-camera icon-left"></span>Добавить фото или видео
+                </button>
+            </div>
+        </div>
+    </fieldset>
+    <div class="prev-next-buttons">
+        <button class="btn btn-link btn-lg btn-prev" type="button" onclick="ManyPanelsForm_PrevFromStep(2, 5)">
+            <span class="fa fa-chevron-left icon-left"></span>Назад
+        </button>
+        &nbsp;
+        <button class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded" type="submit">
+            Далее<span class="fa fa-chevron-right icon-right"></span>
+        </button>
+    </div>
+</form>
+
+<div class="request-form_step-with-max-width request-form_ajax-uploader">
+    <div>
+        
+
+
+<div id="i-upl-form-file_1-rdy-form" style="display: none;">
+    <input type="hidden" name="file_1_rdy_name" value="">
+</div>
+
+<form action="https://operado.ru/request_form/step_2" enctype="multipart/form-data" method="post" id="i-upl-form-file_1">
+    <input type="hidden" name="is_set_upl_form_file_1" value="1">
+    <input type="file" name="file_1" onchange="$('#i-upl-form-file_1').submit();">
+    <div class="row progress-wrapper ajax-upload-form" style="display: none;">
+        <div class="col-xs-9">
+            <div class="progress">
+                <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="0%" aria-valuemin="0" aria-valuemax="100" style="width: 0%;">0%</div>
+            </div>
+        </div>
+        <div class="col-xs-3">
+                        <div class="pull-right" id="i-ajax-form-file_1-button-image-delete" style="display: none;">
+                <button type="button" class="btn btn-link ajax-upload-form-button ajax-upload-form-button-red" title="Удалить"><span class="fa fa-times"></span></button>
+            </div>
+            <div class="pull-right" id="i-ajax-form-file_1-button-image-refresh" style="display: none;">
+                <button type="button" class="btn btn-link ajax-upload-form-button ajax-upload-form-button-red" title="Попробовать ещё раз"><span class="fa fa-refresh"></span></button>
+            </div>
+        </div>
+    </div>
+</form>
+    </div>
+    <div class="clearfix"></div>
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_3" class="hidden one-panel">
+                    <form id="request-form_step-3" novalidate>
+    <input type="hidden" name="request_id" value="">
+    <fieldset class="b3-one-group b3-one-group-last">
+        <legend>
+            <span class="b3-one-group-head">
+                <span class="badge">Шаг 3 из 5</span>
+                &nbsp;
+                Давайте познакомимся:
+            </span>
+        </legend>
+
+        <div class="b3-one-group-body request-form_step-with-max-width">
+            <div class="form-group">
+                <label for="i-full_name" class="sr-only">Ваше имя</label>
+                <input type="text" class="form-control" id="i-full_name" name="full_name" value="" placeholder="Ваше имя" required data-error="Пожалуйста представьтесь">
+                <div class="help-block with-errors"></div>
+            </div>
+            <div class="form-group">
+                <label for="i-phone" class="sr-only">Ваш телефон</label>
+                <input type="tel" class="form-control phone-mask" id="i-phone" name="phone" value="" placeholder="Ваш телефон" required data-minlength="16" data-remote="https://operado.ru/request_form&a=client_phone_checker" data-error="Необходим мобильный телефон для связи с вами">
+                <div class="help-block with-errors"></div>
+            </div>
+        </div>
+    </fieldset>
+    <div class="prev-next-buttons">
+        <button class="btn btn-link btn-lg btn-prev" type="button" onclick="ManyPanelsForm_PrevFromStep(3, 5)">
+            <span class="fa fa-chevron-left icon-left"></span>Назад
+        </button>
+        &nbsp;
+        <button class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded" type="submit">
+            Далее<span class="fa fa-chevron-right icon-right"></span>
+        </button>
+    </div>
+</form>
+                </div>
+
+                <div id="many-panels-form-panel_4" class="hidden one-panel">
+                    <form id="request-form_step-4" novalidate>
+    <input type="hidden" name="request_id" value="">
+    <input type="hidden" name="place_longitude" value="">
+    <input type="hidden" name="place_latitude" value="">
+    <fieldset class="b3-one-group b3-one-group-last">
+        <legend>
+            <span class="b3-one-group-head">
+                <span class="badge">Шаг 4 из 5</span>
+                &nbsp;
+                Куда нам ехать?
+            </span>
+        </legend>
+        <div class="b3-one-group-body">
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <div class="form-group">
+                        <label for="suggest" class="sr-only">Адрес</label>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default b3-tooltip-simple" title="Определить автоматически" type="button">
+                                    <span class="fa fa-refresh"></span>
+                                </button>
+                            </span>
+                            <input type="text" class="form-control" id="suggest" name="place_address"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <div class="form-group">
+                        <label for="i-address-home" class="sr-only">Дом</label>
+                        <input type="text" class="form-control text-center" id="i-address-home" name="place_home" placeholder="Дом"/>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-2">
+                    <div class="form-group">
+                        <label for="i-address-apartment" class="sr-only">Квартира</label>
+                        <input type="text" class="form-control text-center" id="i-address-apartment" name="place_apartments" placeholder="Кв."/>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="button" class="btn btn-link btn-without-left-padding btn-without-right-padding btn-without-bottom-padding btn-without-top-padding" id="i-button-additional-about-address">
+                    <span class="fa fa-plus icon-left"></span>Дополнительно об адресе
+                </button>
+            </div>
+            <div class="row" id="i-additional-about-address" style="display: none;">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="i-description">Дополнительно об адресе</label>
+                        <textarea class="form-control" id="i-description" name="place_description" rows="4"></textarea>
+                    </div>
+                </div>
+            </div>
+
+            <div id="i-map" class="location-block_map"></div>
+
+        </div>
+    </fieldset>
+    <div class="prev-next-buttons">
+        <button class="btn btn-link btn-lg btn-prev" type="button" onclick="ManyPanelsForm_PrevFromStep(4, 5)">
+            <span class="fa fa-chevron-left icon-left"></span>Назад
+        </button>
+        &nbsp;
+        <button class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded" type="submit">
+            Далее<span class="fa fa-chevron-right icon-right"></span>
+        </button>
+    </div>
+</form>
+                </div>
+
+                <div id="many-panels-form-panel_5" class="hidden one-panel">
+                    <form id="goto-pay-system-form" method="post" action="https://operado.ru/pay_system/pay">
+    <input type="hidden" name="request_id" value=""/>
+    <input type="hidden" name="pay_step" value="1"/>
+    <input type="hidden" name="price_diagnostic" value="999"/>
+</form>
+
+<form id="request-form_step-5" novalidate>
+    <input type="hidden" name="request_id" value=""/>
+    <input type="hidden" name="status" value="20"/>
+
+    <fieldset class="b3-one-group b3-one-group-last">
+        <legend>
+            <span class="b3-one-group-head">
+                <span class="badge">Шаг 5 из 5</span>
+                &nbsp;
+                Про деньги:
+            </span>
+        </legend>
+        <div class="b3-one-group-body">
+
+            <div class="price-block">
+                <p class="price-block_header">Стоимость диагностики <i class="fa fa-info-circle b3-tooltip" title="В случае согласия на ремонт, диагностика будет бесплатной"></i></p>
+                <p class="price-block_amount" id="i-price-block_amount" data-amount="999">
+                    <span class="price-block_amount-value">999</span><small class="fa fa-rub"></small>
+                    <input type="hidden" name="price_diagnostic" value="999"/>
+                </p>
+                <label>
+                    <input type="checkbox" name="is_guaranty" id="i-is_guaranty"/>
+                    &nbsp;
+                    У меня гарантийный ремонт
+                </label>
+                <div class="price-block_guaranty-agreements" id="i-price-block_guaranty-agreements" style="display: none;">
+                    <strong class="price-block_guaranty-agreements_header">Соглашение по гарантийному ремонту</strong>
+                    <div class="price-block_guaranty-agreements_body">
+                        <p>
+                            Уважаемый клиент, информируем вас, что если при диагностике выяснится, что гарантия на необходимый ремонт не распространяется, то вы вправе:
+                        </p>
+                        <ul>
+                            <li>Отказаться от ремонта оплатив диагностику</li>
+                            <li>Согласиться на платный ремонт (в таком случае диагностика останется бесплатной)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="line-separator">
+                    <span class="fa fa-angle-double-down"></span>
+                </div>
+                <div id="request-form_step-5_pay-type">
+                    <div class="price-block_select-pay-type">
+                        <p class="price-block_select-pay-type_header">Тип оплаты</p>
+                        <div class="btn-group" data-toggle="buttons">
+                            <label class="btn btn-default btn-group_first active">
+                                <input type="radio" name="pay_type" value="card" checked="checked"> Карта
+                            </label>
+                            <label class="btn btn-default btn-group_last">
+                                <input type="radio" name="pay_type" value="cash"> Наличные
+                            </label>
+                        </div>
+                    </div>
+                    <div class="line-separator">
+                        <span class="fa fa-angle-double-down"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>
+                        <input type="checkbox" class="js-switch" data-error="Для продолжения необходимо согласиться с договором оферты" required/>
+                        &nbsp;
+                        Я согласен с <a href="/offer?is_ajax=1" data-width="100%" data-toggle="lightbox" data-title="Пользовательское соглашение">договором оферты</a>
+                    </label>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+
+        </div>
+    </fieldset>
+    <div class="prev-next-buttons">
+        <button class="btn btn-link btn-lg btn-prev" type="button" onclick="ManyPanelsForm_PrevFromStep(5, 5)">
+            <span class="fa fa-chevron-left icon-left"></span>Назад
+        </button>
+        &nbsp;
+        <button class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded" type="submit">
+            Заказать<span class="fa fa-chevron-right icon-right"></span>
+        </button>
+    </div>
+</form>
+                </div>
+
+                <div id="many-panels-form-panel_phone_verification" class="hidden one-panel">
+                    <form id="request-form_phone-verification" novalidate>
+    <input type="hidden" name="phone_number_for_verification" value="">
+    <fieldset class="b3-one-group b3-one-group-last">
+    <legend>
+        <span class="b3-one-group-head">
+            Введите код из СМС
+        </span>
+    </legend>
+    <div class="b3-one-group-body request-form_step-with-max-width">
+        <div class="form-group">
+            <label for="i-description" class="sr-only">Код</label>
+            <div class="row">
+                <div class="col-xs-3">
+                    <input type="tel" min="1" max="10" class="form-control phone-verification-block_input input-focus-sequence" name="code_1" data-next-focus="[name='code_2']" maxlength="1" required/>
+                </div>
+                <div class="col-xs-3">
+                    <input type="tel" min="1" max="10" class="form-control phone-verification-block_input input-focus-sequence" name="code_2" data-next-focus="[name='code_3']" maxlength="1" required/>
+                </div>
+                <div class="col-xs-3">
+                    <input type="tel" min="1" max="10" class="form-control phone-verification-block_input input-focus-sequence" name="code_3" data-next-focus="[name='code_4']" maxlength="1" required/>
+                </div>
+                <div class="col-xs-3">
+                    <input type="tel" min="1" max="10" class="form-control phone-verification-block_input input-focus-sequence" name="code_4" data-next-focus="#i-phone-verification-block_next-button" maxlength="1" required/>
+                </div>
+            </div>
+        </div>
+        <div class="phone-verification-block_resend-block">
+            <div class="is-wait-resend-sms-code-message">Получить новый код можно через: <span id="i-resend-sms-timer" class="phone-verification-block_resend-block_timer">01:00</span></div>
+            <div class="is-resend-sms-code-message" style="display: none;">
+                <button type="button" class="btn btn-link">
+                    <span class="fa fa-refresh icon-left"></span>Отправить код повторно
+                </button>
+            </div>
+        </div>
+        <div class="help-block with-errors phone-verification-block_error-block">
+            <div>Неверный код.</div>
+            <div>Пожалуйста попробуйте ещё раз</div>
+        </div>
+    </div>
+</fieldset>
+    <div class="prev-next-buttons">
+        <button class="btn btn-link btn-lg btn-prev" type="button" onclick="ManyPanelsForm_ShowStep('phone_verification', 3, 5)">
+            <span class="fa fa-chevron-left icon-left"></span>Назад
+        </button>
+        &nbsp;
+        <button class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded" type="submit" id="i-phone-verification-block_next-button">
+            Далее<span class="fa fa-chevron-right icon-right"></span>
+        </button>
+    </div>
+</form>
+                </div>
+
+                <div id="many-panels-form-panel_searching_engineer" class="hidden one-panel">
+                    <div class="search-engineer-block">
+    <div>
+        <img src="i/image/logo_in_circle.png" class="fa-spin">
+    </div>
+    <div class="search-engineer-block_header">
+        Ищем свободного инженера...
+    </div>
+    <div class="search-engineer-block_actions">
+        <button type="button" class="btn btn-default btn-lg btn-min-width btn-rounded" data-toggle="modal" data-target="#cancelRequestModal">
+            <span class="fa fa-times icon-left"></span>Отмена
+        </button>
+    </div>
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_engineer_found" class="hidden one-panel">
+                    
+
+<div class="engineer-found-block" id="i-engineer-found-block">
+
+    <canvas id="i-engineer-found-block_canvas" width="290" height="200"></canvas>
+    <div class="engineer-found-block_offset-y">
+        <div class="text-center">
+            <p class="engineer-found-block_header">
+                Нужный инженер найден!
+            </p>
+        </div>
+        <div class="engineer-found-block_engineer">
+            <div class="engineer-found-block_engineer-avatar">
+                <img src="i/image/avatars/default.png" data-start-src-path="/upl/users/" id="i-found-engineer_avatar" alt="Engineer">
+                <div class="engineer-found-block_engineer-name" id="i-found-engineer_name">Инженер Operado</div>
+            </div>
+        </div>
+        <div class="line-separator">
+            <span class="fa fa-angle-double-down"></span>
+        </div>
+        <div class="engineer-found-block_timer">
+            Инженер свяжется в течение:
+            <span id="i-call-timer" class="engineer-found-block_timer-value">05:00</span>
+            <div class="engineer-found-block_actions">
+                <button type="button" class="btn btn-link btn-lg show-additional-actions" data-toggle-block="#i-engineer-found-block_additional-actions">
+                    Дополнительные действия<span class="fa fa-caret-down icon-right"></span>
+                </button>
+                <a href="tel:+79992550603" class="btn btn-primary btn-lg btn-min-width btn-rounded" id="i-call-button" style="display: none;">
+                    <span class="fa fa-phone icon-left"></span>Позвонить первым
+                </a>
+            </div>
+        </div>
+        <div class="engineer-found-block_additional-actions" id="i-engineer-found-block_additional-actions">
+            <div class="row">
+                <div class="col-xs-4 engineer-found-block_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <button type="button" class="btn btn-default btn-lg btn-circle">
+                            <span class="fa fa-comments"></span>
+                        </button>
+                    </div>
+                    <span class="engineer-found-block_additional-actions_action-name">Чат с инженером</span>
+                </div>
+                <div class="col-xs-4 engineer-found-block_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <a href="tel:+79992550603" class="btn btn-default btn-lg btn-circle">
+                            <span class="fa fa-life-ring"></span>
+                        </a>
+                    </div>
+                    <span class="engineer-found-block_additional-actions_action-name">Связаться с оператором</span>
+                </div>
+                <div class="col-xs-4 engineer-found-block_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <button type="button" class="btn btn-default btn-lg btn-circle" data-toggle="modal" data-target="#cancelRequestModal">
+                            <span class="fa fa-times"></span>
+                        </button>
+                    </div>
+                    <span class="engineer-found-block_additional-actions_action-name">Отменить заказ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_engineer_calling" class="hidden one-panel">
+                    <form id="request-form_engineer-calling" novalidate>
+    <input type="hidden" name="request_id" value=""/>
+    <div class="engineer-calling-block">
+        <div class="text-center">
+            <p class="engineer-calling-block_header">
+                Инженер уже звонит...
+            </p>
+        </div>
+        <div class="engineer-calling-block_calling-image">
+            <img src="i/image/calling_phone.gif" alt="Calling...">
+        </div>
+        <div class="engineer-calling-block_actions">
+            <button type="submit" class="btn btn-primary btn-lg btn-min-width btn-rounded engineer-calling-block_no-call-button button-with-timer" disabled="disabled">
+                У меня нет звонка<span class="engineer-calling-block_no-call-button_timer button-with-timer_timer">00:30</span>
+            </button>
+        </div>
+    </div>
+</form>
+                </div>
+
+                <div id="many-panels-form-panel_engineer_not_call" class="hidden one-panel">
+                    <div class="engineer-found-block">
+
+    <div>
+        <div class="text-center">
+            <p class="engineer-found-block_header">
+                С вами свяжется наш оператор
+            </p>
+        </div>
+        <div class="engineer-found-block_engineer">
+            <div class="engineer-found-block_engineer-avatar">
+                <img src="i/image/avatars/default_callcenter.png" id="i-found-engineer_avatar" alt="Operator">
+                <div class="engineer-found-block_engineer-name" id="i-found-engineer_name">Оператор Operado</div>
+            </div>
+        </div>
+        <div class="line-separator">
+            <span class="fa fa-angle-double-down"></span>
+        </div>
+        <div>
+            <p>Извините, но почему-то инженер не может позвонить вам прямо сейчас.</p>
+            <p>Это правда редкость для нашего сервиса.</p>
+            <p>В самое ближайшее время с вами свяжется наш оператор что бы обсудить заявку.</p>
+            <p>Ещё раз извините и спасибо за терпение!</p>
+            <div class="engineer-found-block_actions">
+                <button type="button" class="btn btn-link btn-lg show-additional-actions" data-toggle-block="#i-engineer-found-block_additional-actions-2">
+                    Ещё<span class="fa fa-caret-down icon-right"></span>
+                </button>
+                <a href="tel:+79992550603" class="btn btn-primary btn-lg btn-min-width btn-rounded">
+                    <span class="fa fa-phone icon-left"></span>Позвонить первым
+                </a>
+            </div>
+        </div>
+        <div class="engineer-found-block_additional-actions" id="i-engineer-found-block_additional-actions-2">
+            <div class="row">
+                <div class="col-xs-12 engineer-found-block_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <button type="button" class="btn btn-default btn-lg btn-circle" data-toggle="modal" data-target="#cancelRequestModal">
+                            <span class="fa fa-times"></span>
+                        </button>
+                    </div>
+                    <span class="engineer-found-block_additional-actions_action-name">Отменить заказ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_payment_success" class="hidden one-panel">
+                    
+
+<div class="notice-modal text-center">
+    <div class="notice-modal_icon">
+        <span class="fa fa-check-circle text-success"></span>
+    </div>
+    <div class="notice-modal_header">
+        Диагностика оплачена    </div>
+            <div class="notice-modal_info">
+            В течение 10-ти секунд начнётся поиск инженера...        </div>
+        <div class="notice-modal_actions">
+        <button type="button" class="btn btn-primary btn-lg btn-min-width btn-rounded button-with-timer" onclick="ManyPanelsForm_ShowStep('AUTO', 'searching_engineer', 5)">
+            <span class="fa fa-check icon-left"></span>OK<span class="notice-modal_timer button-with-timer_timer payment-success-timer">00:10</span>
+        </button>
+    </div>
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_payment_success_2" class="hidden one-panel">
+                    
+
+<div class="notice-modal text-center">
+    <div class="notice-modal_icon">
+        <span class="fa fa-check-circle text-success"></span>
+    </div>
+    <div class="notice-modal_header">
+        Заявка оплачена    </div>
+            <div class="notice-modal_info">
+            Ваша заявка успешно оплачена. Спасибо!        </div>
+        <div class="notice-modal_actions">
+        <button type="button" class="btn btn-primary btn-lg btn-min-width btn-rounded button-with-timer" onclick="ManyPanelsForm_ShowStep('AUTO', 'request_done_step_2', 5)">
+            <span class="fa fa-check icon-left"></span>OK<span class="notice-modal_timer button-with-timer_timer payment-success-timer">00:10</span>
+        </button>
+    </div>
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_payment_fail" class="hidden one-panel">
+                    <div class="notice-modal text-center">
+    <div class="notice-modal_icon">
+        <span class="fa fa-times-circle text-danger"></span>
+    </div>
+    <div class="notice-modal_header">
+        Ошибка оплаты
+    </div>
+    <div class="notice-modal_info">
+        <div>
+            <p>К сожалению произошла какая-то ошибка и ваши деньги до нас не дошли.</p>
+            <p>Если у вас деньги списались, то пожалуйста свяжитесь с нашим менеджером и мы выясним что произошло.</p>
+            <div class="space-separator-5"></div>
+        </div>
+        <div class="line-separator">
+            <span class="fa fa-angle-double-down"></span>
+        </div>
+        <div>
+            <p>Связь с оператором: <a href="tel:+79992550603">+7(999)255-06-03</a></p>
+        </div>
+    </div>
+    <div class="notice-modal_actions">
+        <button type="button" class="btn btn-primary btn-lg btn-min-width btn-rounded" onclick="ManyPanelsForm_ShowStep('payment_fail', '1', 5)">
+            <span class="fa fa-refresh icon-left"></span>Попробовать ещё раз
+        </button>
+    </div>
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_request_pause" class="hidden one-panel">
+                    <fieldset class="b3-one-group b3-one-group-last notice-modal request-info-block">
+    <legend>
+        <span class="b3-one-group-head">
+            Заявка
+            &nbsp;
+            №<span class="badge i-request-number"></span>
+            &nbsp;
+            <span class="i-request-legend"></span>:
+        </span>
+    </legend>
+    <div class="b3-one-group-body">
+        <div class="notice-modal_icon notice-modal_icon-big text-center">
+            <span class="fa fa-pause-circle text-muted"></span>
+            <span class="notice-modal_icon-info">Ожидаем начала работ</span>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-6">
+                <div class="notice-modal_info-block">
+                    <div class="notice-modal_info-block-header text-muted">Дата проведения работ</div>
+                    <div class="notice-modal_info-block-body notice-modal_info-block-body_double-padding">
+                        <span class="i-request-planned-work-time">Не установлено</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-6">
+                <div class="notice-modal_info-block">
+                    <div class="notice-modal_info-block-header text-muted">Исполнитель</div>
+                    <div class="notice-modal_info-block-body">
+                        <img src="i/image/avatars/default.png" data-start-src-path="/upl/users/" class="notice-modal_avatar i-request-engineer-avatar"/>
+                        &nbsp;
+                        <span class="i-request-engineer-name">Инженер Operado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-separator">
+            <span class="fa fa-angle-double-down"></span>
+        </div>
+        <div class="request-info-block_actions">
+            <button type="button" class="btn btn-link btn-lg show-additional-actions" data-toggle-block="#i-request-pause_additional-actions">
+                Ещё<span class="fa fa-caret-down icon-right"></span>
+            </button>
+            <button class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded" type="button">
+                <span class="fa fa-phone icon-left"></span>Позвонить инженеру
+            </button>
+        </div>
+        <div class="notice-modal_additional-actions" id="i-request-pause_additional-actions">
+            <div class="row">
+                <div class="col-xs-4 notice-modal_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <button type="button" class="btn btn-default btn-lg btn-circle">
+                            <span class="fa fa-comments"></span>
+                        </button>
+                    </div>
+                    <span class="notice-modal_additional-actions_action-name">Чат с инженером</span>
+                </div>
+                <div class="col-xs-4 notice-modal_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <a href="tel:+79992550603" class="btn btn-default btn-lg btn-circle">
+                            <span class="fa fa-life-ring"></span>
+                        </a>
+                    </div>
+                    <span class="notice-modal_additional-actions_action-name">Связаться с оператором</span>
+                </div>
+                <div class="col-xs-4 notice-modal_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <button type="button" class="btn btn-default btn-lg btn-circle" data-toggle="modal" data-target="#cancelRequestModal">
+                            <span class="fa fa-times"></span>
+                        </button>
+                    </div>
+                    <span class="notice-modal_additional-actions_action-name">Отменить заказ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+                </div>
+
+                <div id="many-panels-form-panel_request_in_work" class="hidden one-panel">
+                    <fieldset class="b3-one-group b3-one-group-last notice-modal request-info-block">
+    <legend>
+        <span class="b3-one-group-head">
+            Заявка
+            &nbsp;
+            №<span class="badge i-request-number"></span>
+            &nbsp;
+            <span class="i-request-legend"></span>:
+        </span>
+    </legend>
+    <div class="b3-one-group-body">
+        <div class="text-center text-success">
+            <div class="notice-modal_icon notice-modal_icon-in-circle">
+                <span class="fa fa-hourglass fa-spin"></span>
+            </div>
+            <div class="space-separator-15"></div>
+            <span class="notice-modal_icon-info">Инженер работает по вашей заявке</span>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="notice-modal_info-block">
+                    <div class="notice-modal_info-block-header text-muted">Исполнитель</div>
+                    <div class="notice-modal_info-block-body">
+                        <img src="i/image/avatars/default.png" data-start-src-path="/upl/users/" class="notice-modal_avatar i-request-engineer-avatar"/>
+                        &nbsp;
+                        <span class="i-request-engineer-name">Инженер Operado</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="line-separator">
+            <span class="fa fa-angle-double-down"></span>
+        </div>
+        <div class="request-info-block_actions">
+            <button type="button" class="btn btn-link btn-lg show-additional-actions" data-toggle-block="#i-request-in-work_additional-actions">
+                Ещё<span class="fa fa-caret-down icon-right"></span>
+            </button>
+            <button class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded" type="button">
+                <span class="fa fa-phone icon-left"></span>Позвонить инженеру
+            </button>
+        </div>
+        <div class="notice-modal_additional-actions" id="i-request-in-work_additional-actions">
+            <div class="row">
+                <div class="col-xs-4 notice-modal_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <button type="button" class="btn btn-default btn-lg btn-circle">
+                            <span class="fa fa-comments"></span>
+                        </button>
+                    </div>
+                    <span class="notice-modal_additional-actions_action-name">Чат с инженером</span>
+                </div>
+                <div class="col-xs-4 notice-modal_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <a href="tel:+79992550603" class="btn btn-default btn-lg btn-circle">
+                            <span class="fa fa-life-ring"></span>
+                        </a>
+                    </div>
+                    <span class="notice-modal_additional-actions_action-name">Связаться с оператором</span>
+                </div>
+                <div class="col-xs-4 notice-modal_additional-actions_action">
+                    <div class="btn-circle-wrapper">
+                        <button type="button" class="btn btn-default btn-lg btn-circle" data-toggle="modal" data-target="#cancelRequestModal">
+                            <span class="fa fa-times"></span>
+                        </button>
+                    </div>
+                    <span class="notice-modal_additional-actions_action-name">Отменить заказ</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</fieldset>
+                </div>
+
+                <div id="many-panels-form-panel_request_done_step_1" class="hidden one-panel">
+                    <form id="goto-pay-system-form-2" method="post" action="/pay_system/pay">
+    <input type="hidden" name="request_id" value=""/>
+</form>
+
+<form id="request-form_done-step-1" novalidate>
+    <input type="hidden" name="request_id" value=""/>
+    <fieldset class="b3-one-group b3-one-group-last">
+        <legend>
+            <span class="b3-one-group-head">
+                Оплата заявки:
+            </span>
+        </legend>
+        <div class="b3-one-group-body">
+            <div class="price-block">
+                <p class="price-block_header">К оплате</p>
+                <p class="price-block_amount"><span class="price-block_amount-value i-prices-full">0</span><small class="fa fa-rub"></small></p>
+                <div class="request-done_price-additional">
+                    <div class="i-diagnostic-paid" style="display: none;">
+                        <span class="badge"><nobr>+<span class="i-prices-details">0</span> <span class="fa fa-rub"></span></nobr> &bull; детали</span>
+                        <span class="badge"><nobr>+<span class="i-prices-work">0</span> <span class="fa fa-rub"></span></nobr> &bull; работа</span>
+                        <span class="badge"><strike><nobr>+<span class="i-prices-diagnostic">0</span> <span class="fa fa-rub"></span></nobr> &bull; диагностика</strike> бесплатно!</span>
+                        <span class="badge"><nobr>-<span class="i-prices-diagnostic">0</span> <span class="fa fa-rub"></span></nobr> &bull; предоплата</span>
+                    </div>
+                    <div class="i-diagnostic-not-paid" style="display: none;">
+                        <span class="badge"><nobr>+<span class="i-prices-details">0</span> <span class="fa fa-rub"></span></nobr> &bull; детали</span>
+                        <span class="badge"><nobr>+<span class="i-prices-work">0</span> <span class="fa fa-rub"></span></nobr> &bull; работа</span>
+                        <span class="badge"><strike><nobr>+<span class="i-prices-diagnostic">0</span> <span class="fa fa-rub"></span></nobr> &bull; диагностика</strike> бесплатно!</span>
+                    </div>
+                </div>
+                <div class="line-separator">
+                    <span class="fa fa-angle-double-down"></span>
+                </div>
+                <div class="price-block_select-pay-type">
+                    <p class="price-block_select-pay-type_header">Тип оплаты</p>
+                    <div class="btn-group" data-toggle="buttons">
+                        <label class="btn btn-default btn-group_first active">
+                            <input type="radio" name="pay_type_2" value="card" checked="checked"> Карта
+                        </label>
+                        <label class="btn btn-default btn-group_last">
+                            <input type="radio" name="pay_type_2" value="cash"> Наличные
+                        </label>
+                    </div>
+                </div>
+                <div class="space-separator-15"></div>
+            </div>
+        </div>
+    </fieldset>
+    <div class="prev-next-buttons">
+        <a href="#" class="btn btn-link btn-lg btn-prev">
+            <span class="fa fa-life-ring icon-left"></span>Пожаловаться
+        </a>
+        &nbsp;
+        <button type="submit" class="btn btn-primary btn-lg btn-next btn-min-width btn-rounded">
+            Оплатить<span class="fa fa-chevron-right icon-right"></span>
+        </button>
+    </div>
+</form>
+                </div>
+
+                <div id="many-panels-form-panel_wait_pay_approve_2" class="hidden one-panel">
+                    <div class="notice-modal text-center">
+    <div class="notice-modal_icon notice-modal_icon-in-circle text-success">
+        <span class="fa fa-hourglass fa-spin"></span>
+    </div>
+    <div class="notice-modal_header">
+        Ожидаем оплаты
+    </div>
+    <div class="notice-modal_info">
+        Пожалуйста оплатите заявку <span class="text-primary">инженеру наличными</span>.
+    </div>
+</div>
+                </div>
+
+                <div id="many-panels-form-panel_request_done_step_2" class="hidden one-panel">
+                    
+
+<form id="request-form_done-step-2" novalidate>
+    <input type="hidden" name="request_id" value=""/>
+    <div class="notice-modal text-center">
+        <canvas id="i-request-done_canvas" width="290" height="150"></canvas>
+        <div class="request-done_offset-y">
+            <div class="notice-modal_icon">
+                <span class="fa fa-check-circle text-success"></span>
+            </div>
+            <div class="notice-modal_header">
+                Спасибо, что вы обратились в Operado!
+            </div>
+            <div class="line-separator">
+                <span class="fa fa-angle-double-down"></span>
+            </div>
+            <div class="space-separator-5"></div>
+            <p class="text-muted">Пожалуйста, оцените работу инженера</p>
+            <div class="request-done_engineer">
+                <div class="request-done_engineer-avatar">
+                    <img src="i/image/avatars/default.png" data-start-src-path="/upl/users/" id="i-done-step-2-engineer_avatar" alt="Engineer">
+                    <div class="request-done_engineer-name" id="i-done-step-2-engineer_name">
+                        Инженер Operado
+                    </div>
+                </div>
+            </div>
+            <div class="request-done_rating">
+                
+
+<section class='rating-widget' data-callback-func="SetRating">
+    <div class='rating-stars text-center'>
+        <ul id='stars'>
+            <li class='star' data-value='1'>
+                <i class='fa fa-star fa-fw'></i>
+            </li>
+            <li class='star' data-value='2'>
+                <i class='fa fa-star fa-fw'></i>
+            </li>
+            <li class='star' data-value='3'>
+                <i class='fa fa-star fa-fw'></i>
+            </li>
+            <li class='star' data-value='4'>
+                <i class='fa fa-star fa-fw'></i>
+            </li>
+            <li class='star' data-value='5'>
+                <i class='fa fa-star fa-fw'></i>
+            </li>
+        </ul>
+    </div>
+</section>
+                <div class="request-done_rating-bad">
+                    <fieldset class="b3-one-group b3-one-group-last">
+                        <label>Пожалуйста, расскажите нам о проблеме:</label>
+                        <div class="b3-one-group-body request-form_step-with-max-width">
+                            <div class="form-group">
+                                <label for="i-rating-problem" class="sr-only">Проблема</label>
+                                <textarea class="form-control" id="i-rating-problem" name="rating_problem" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+                <div class="request-done_rating-good">
+                    Спасибо за ваш отзыв!
+                </div>
+            </div>
+            <div class="line-separator">
+                <span class="fa fa-angle-double-down"></span>
+            </div>
+            <div class="space-separator-15"></div>
+            <div class="notice-modal_actions">
+                <button type="submit" class="btn btn-primary btn-lg btn-min-width btn-rounded">
+                    <span class="fa fa-check icon-left"></span>OK
+                </button>
+            </div>
+        </div>
+    </div>
+</form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=215f771a-e251-4871-b409-b1dfb06ed996" type="text/javascript"></script>
+
+<div class="spacer-separator"></div>
+    </div>
+</div>
+
+<footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <a href="/engineer/registration">К нам на работу</a>
+                &nbsp;&bull;&nbsp;
+                <a href="/privacy_policy?is_ajax=1" data-width="100%" data-toggle="lightbox" data-title="Политика конфиденциальности">Политика конфиденциальности</a>
+            </div>
+        </div>
+    </div>
+</footer>
+<script type="text/javascript" src="cordova.js"></script>
+</body>
+</html>

@@ -1,0 +1,171 @@
+// Маленький блок cente с информационной карточной (например карточной о туре)
+.one-data-preview-block {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  .m-border-radius(6px);
+  position: relative;
+  background: #FFF;
+
+  &-image {
+    display: block;
+    height: 150px;
+    .m-border-radius(5px 5px 0 0);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    text-decoration: none !important;
+    .m-animate(all);
+    .m-inset-shadow(rgba(0, 0, 0, 0.5), 1px, 0);
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &-icon {
+      display: block;
+      text-align: center;
+      font-size: 60px;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 44px;
+      color: #FFF;
+      .m-text-shadow(rgba(0, 0, 0, 0.4));
+      .m-opacity(0);
+      .m-animate(all);
+    }
+
+    &:hover, &:active, &:focus {
+      .m-inset-shadow(rgba(0, 0, 0, 0.7), 230px);
+
+      .one-data-preview-block-image-icon {
+        .m-opacity(1);
+      }
+    }
+  }
+
+  &-right-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #E5004C;
+    .m-border-radius(5px 0 5px 0);
+    .m-text-shadow(rgba(0, 0, 0, 0.25));
+    color: #FFF;
+    font-size: 11px;
+    font-weight: bold;
+    padding: 3px 6px;
+    text-transform: uppercase;
+    word-spacing: 3px;
+  }
+
+  &-price {
+    position: absolute;
+    right: -19px;
+    bottom: -6px;
+
+    .value {
+      text-align: center;
+      font-size: 16px;
+      background: url("/i/image/_dev/style_blocks/ribbon_left_right.png") left center no-repeat;
+      display: inline-block;
+      height: 47px;
+      padding-right: 12px;
+      padding-top: 9px;
+      width: 149px;
+      margin-left: 11px;
+      word-spacing: 3px;
+      .m-text-shadow(rgba(0, 0, 0, 0.45));
+      color: rgba(255, 255, 255, 0.85);
+
+      big {
+        font-size: 21px;
+        font-weight: bold;
+        color: #FFF;
+      }
+
+      .fa {
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.85);
+        padding-left: 1px;
+      }
+    }
+  }
+
+  &-params {
+    padding-top: 164px;
+
+    .btn-xs {
+      .fa {
+        font-size: 14px;
+        padding-top: 3px;
+      }
+    }
+
+    &-name {
+      display: block;
+      height: 50px;
+      position: relative;
+
+      > a {
+        position: absolute;
+        left: 0;
+        bottom: 17px;
+        width: 100%;
+        display: block;
+        text-align: center;
+        font-size: 17px;
+        padding-left: 10px;
+        padding-right: 10px;
+        color: #333;
+        .m-animate(all);
+
+        &:hover, &:active, &:focus {
+          text-decoration: none;
+          color: @brand-primary;
+        }
+
+        .icon-right {
+          margin-left: 12px;
+          font-size: 14px;
+          color: @brand-primary;
+        }
+      }
+    }
+
+    &-left {
+      text-align: right;
+      font-size: 15px;
+      padding: 9px 20px 9px 0;
+      float: left;
+      width: 50%;
+      .text-overflow();
+
+      img {
+        display: inline-block;
+        margin-bottom: 4px;
+        width: 22px;
+        height: 22px;
+        .m-border-radius(50%);
+        border: 1px solid #DDD;
+      }
+    }
+
+    &-right {
+      text-align: left;
+      font-size: 21px;
+      padding: 3px 0 5px 20px;
+      float: left;
+      width: 50%;
+      .text-overflow();
+
+      small {
+        font-size: 15px;
+      }
+    }
+
+    &-actions {
+      text-align: center;
+      height: 59px;
+      padding-top: 9px;
+    }
+  }
+}

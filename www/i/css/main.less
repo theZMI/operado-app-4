@@ -1,0 +1,1147 @@
+// Стили страницы что бы меню было в самом верху, а футер внизу
+html {
+  height: 100%;
+  min-width: @site-min-width;
+
+  body {
+    height: 100%;
+    padding-top: @site-menu-height;
+    min-width: @site-min-width;
+  }
+}
+
+#wrapper {
+  min-height: 100%;
+
+  // Если нужно что бы футер был ниже страницы и для его просмотра требовалось чуть-чуть мотнуть страницу
+  // height: auto;
+  // margin: 0 auto;
+
+  // Если нужно что бы футер был не ниже контента, а просто внизу страницы:
+  margin: 0 auto -1 * @site-footer-height;
+  padding-bottom: @site-footer-height + 1px;
+}
+
+#footer {
+  min-height: @site-footer-height;
+  padding-top: 15px;
+}
+
+
+// Дополнение к стилям когда у нас обыкровенная страница (например без заливки или большой фоновой картинки)
+html.is-usually-page {
+  background: @site-substrate url("/i/image/operado_bg.png") left top repeat;
+
+  body {
+    background: transparent;
+    color: @site-text-color;
+    .m-text-shadow(@site-text-shadow);
+
+    #wrapper {
+      background: transparent;
+    }
+  }
+
+  #footer {
+    color: #999;
+    // .m-box-shadow(@site-box-shadow-color, @site-box-shadow-size);
+    // background: #FFF;
+
+    a {
+      color: #000;
+      .m-animate(all);
+
+      &:hover, &:active, &:focus {
+        color: @brand-primary;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+
+// Страница с картинкой на весь фон (обычно через _dev/full_background)
+html.is-full-bg-page {
+  background: @site-substrate;
+
+  body {
+    background: transparent;
+    color: @site-text-color;
+    .m-text-shadow(@site-text-shadow);
+  }
+}
+
+
+// Ссылка необходимая на время разработки
+.for-develop {
+  color: #38d683;
+  font-size: 15px;
+}
+
+
+// Не показываем подсказку в magicsuggest
+.ms-helper {
+  display: none !important;
+}
+
+// Отображения выделенного элемента в magicsuggest
+.ms-ctn {
+  .ms-sel-item {
+    background: @brand-primary;
+    border-color: @brand-primary;
+    color: #FFF;
+    .m-text-shadow(darken(@brand-primary, 5%));
+
+    &:hover, &:active, &:focus {
+      border-color: @brand-primary;
+    }
+  }
+}
+
+
+// Лого в главном меню
+.menu-logo {
+  background: url("/i/image/small_logo.png") left center no-repeat;
+  width: 147px;
+  height: 16px;
+  display: inline-block;
+  margin-top: 3px;
+}
+
+
+// Специальные переписывания меню для этого сайта
+.site-menu-overwrite {
+  // Стили кнопки "открыть меню"
+  .navbar-toggle {
+    border: none 0;
+    padding-right: 0;
+    margin-top: 10px;
+  }
+
+  // Т.к. теперь collapse убран, то надо вновь выставлять
+  .navbar {
+    > .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  .navbar-nav {
+    margin-top: -7px;
+
+    > li {
+      > a {
+        padding-left: 30px;
+        padding-top: 7px;
+        padding-right: 7px;
+        padding-bottom: 6px;
+      }
+    }
+  }
+
+  @media (max-width: @screen-xs-max) {
+    .navbar {
+      > .container {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+    }
+
+    .navbar-brand {
+      display: none;
+    }
+
+    .navbar-toggle {
+      margin-right: unset;
+      margin-left: 5px;
+      margin-top: 10px;
+      float: left;
+    }
+  }
+
+  .menu-separator {
+    background-color: @brand-primary;
+    display: block;
+    margin: 10px 0 7px 15px;
+    height: 1px;
+  }
+
+  .menu-separator-2 {
+    display: block;
+    position: relative;
+    height: 15px;
+    margin-left: -15px;
+
+    &_label {
+      font-size: 13px;
+      color: #AAA;
+      border-bottom: 1px solid;
+      position: absolute;
+      left: 0;
+      bottom: -2px;
+      line-height: 1.25;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    .navbar-collapse {
+      width: 200px;
+      float: right;
+    }
+  }
+}
+
+
+// Аватар юзер в меню
+.menu-user-avatar {
+  @media (min-width: @screen-sm-min) {
+    > a {
+      padding-top: 8px !important;
+      padding-bottom: 0 !important;
+      margin: 0;
+    }
+  }
+
+  &_avatar {
+    width: 35px;
+    height: 35px;
+    .m-border-radius(50%);
+    border: 1px solid transparent;
+    .m-animate(all);
+
+    &:hover, &:active, &:focus {
+      border-color: @brand-primary;
+    }
+  }
+}
+
+
+// Специальная изменения футера для этого сайта
+#footer {
+  @media (min-width: @screen-sm-min) {
+    > .container {
+      padding-left: 0;
+      padding-right: 0;
+      overflow-x: hidden;
+    }
+  }
+}
+
+
+.control-label {
+  font-size: 15px;
+}
+
+
+.help-block {
+  font-size: 15px;
+  margin-top: 2px;
+}
+
+
+// Блок с крутилкой загрузки
+.loading-block {
+  text-align: center;
+  margin: 5vh 0;
+}
+
+
+// При ошибке выделяем только красным только текст, а не shadow и border
+.has-error {
+  .input-group-addon,
+  .form-control {
+    border-color: @input-border;
+    .m-box-shadow(transparent);
+    box-shadow: none;
+    color: @brand-danger;
+
+    &:hover, &:active, &:focus {
+    }
+
+    &::placeholder {
+      color: @brand-danger;
+    }
+  }
+
+  .input-group-addon {
+    background-color: @input-group-addon-bg;
+  }
+}
+
+
+// Кнопка с таймером внутри
+.button-with-timer {
+  position: relative;
+
+  &_timer {
+    position: absolute;
+    right: 7px;
+    top: 4px;
+    font-size: 11px;
+  }
+}
+
+
+// Разделитель-линия
+.line-separator {
+  position: relative;
+  margin: 15px 0;
+  color: #999;
+  // border-top: 1px dashed #DDD;
+  background-image: linear-gradient(to right, #999 10%, rgba(255, 255, 255, 0) 0%);
+  background-position: center;
+  background-size: 10px 1px;
+  background-repeat: repeat-x;
+
+  .fa {
+    display: block;
+    background: #FFF;
+    width: 25px;
+    text-align: center;
+    margin: -7px auto 0 auto;
+  }
+}
+
+
+// Пустота между формой на главной странице и футером
+.space-separator {
+  height: 30px;
+
+  &-15 {
+    height: 15px;
+  }
+
+  &-5 {
+    height: 5px;
+  }
+}
+
+
+// Лого на главной на странице
+.logo-block {
+  &_logo {
+    display: block;
+    background: url("/i/image/logo.png") center center no-repeat;
+    background-size: 75%;
+    width: 100%;
+    max-width: 398px;
+    height: 50px;
+    margin: 5px auto 45px auto;
+    position: relative;
+
+    &-spin {
+      background-image: url("/i/image/logo_in_circle.png");
+      background-size: auto 100%;
+      .fa-spin;
+    }
+  }
+
+  &_slogan {
+    margin-top: -30px;
+    margin-bottom: 45px;
+    text-align: center;
+    font-size: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    strong {
+      color: @brand-primary;
+      font-weight: normal;
+    }
+  }
+
+  @media (min-width: @screen-sm-min) {
+    padding-top: 60px;
+  }
+
+  @media (min-width: @screen-lg-min) {
+    padding-top: 110px;
+  }
+}
+
+
+// Дополнения для модальных окон
+.notice-modal {
+  &_icon {
+    font-size: 60px;
+
+    &-in-circle {
+      border: 1px solid;
+      font-size: 23px;
+      width: 53px;
+      height: 53px;
+      padding-top: 11px;
+      margin-top: 17px;
+      margin-bottom: 15px;
+      border-radius: 50%;
+      vertical-align: top;
+      display: inline-block;
+    }
+
+    &-big {
+      font-size: 90px;
+    }
+
+    &-info {
+      .lead;
+      display: block;
+      text-align: center;
+      margin-top: -15px;
+    }
+
+    .fa {
+      &.text-muted {
+        color: #CBCBCB;
+      }
+    }
+  }
+
+  &_header {
+    .lead;
+    margin-bottom: 0;
+    padding-bottom: 15px;
+  }
+
+  &_info {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  &_info-block {
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    &-header {
+      display: block;
+      text-align: center;
+    }
+
+    &-body {
+      text-align: center;
+      padding: 0;
+
+      &_double-padding {
+        padding: 7px 0;
+      }
+    }
+  }
+
+  &_actions {
+    text-align: center;
+    min-height: 45px;
+  }
+
+  &_avatar {
+    width: 35px;
+    height: 35px;
+    .m-border-radius(50%);
+  }
+
+  &_additional-actions {
+    display: none;
+    margin-top: 25px;
+
+    &_action {
+      text-align: center;
+
+      &-name {
+        line-height: 1.25;
+        font-size: 13px;
+        display: inline-block;
+      }
+    }
+  }
+}
+
+
+// Форма авторизации клиента
+.login-form,
+  // Форма регистрации клиента
+.registration-form,
+  // Форма "забыл пароль" актуальна только для инженеров т.к. только у них она отдельная
+.forgot-password-form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 510px;
+
+  .std-wrapper_body_with-vertical-spacing {
+    .notice-modal {
+      max-width: 285px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .notice-modal_icon {
+      padding-bottom: 15px;
+    }
+  }
+}
+
+
+// Форма ввода Pin-а
+.phone-verification-block {
+  &_input {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 47px;
+    letter-spacing: 0;
+    text-align: center;
+    height: auto;
+  }
+
+  &_error-block {
+    text-align: center;
+    margin: 0;
+    padding: 7px 0 15px 0;
+  }
+
+  &_resend-block {
+    margin-top: -15px;
+    height: 30px;
+    text-align: center;
+    .text-muted;
+
+    .btn-link {
+      padding: 0;
+    }
+
+    &_timer {
+      color: #000;
+      border: 1px solid;
+      .m-border-radius(15px);
+      padding: 2px 8px;
+      margin-left: 5px;
+    }
+  }
+}
+
+
+// Изменения fieldset
+.b3-one-group {
+  margin: 0;
+
+  legend {
+    border: none 0;
+    padding: 9px 0 0 0;
+    // text-align: center;
+
+    @media (min-width: @screen-sm-min) {
+      padding-bottom: 9px;
+    }
+
+    .badge {
+      background: @brand-primary;
+      .m-text-shadow(darken(@brand-primary, 5%));
+    }
+
+    .b3-one-group-head {
+      position: relative;
+      background: #FFF;
+      text-shadow: none;
+      font-size: 15px;
+      padding: 0 0 7px 0;
+      border-radius: 0;
+      border-bottom: 1px solid @brand-primary;
+      color: @brand-primary;
+      font-weight: normal;
+    }
+  }
+
+  .b3-one-group-body {
+    padding: 0;
+  }
+}
+
+.prev-next-buttons {
+  height: 45px;
+  padding-top: 0;
+  text-align: center;
+  margin-top: 5px;
+
+  @media (min-width: @screen-sm-min) {
+    margin-top: 15px;
+  }
+
+  .btn-next, .btn-prev {
+    // float: none;
+  }
+}
+
+
+// Форма оформления заявки
+.request-form {
+  max-width: @screen-sm-min;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: @screen-xs-max) {
+    .m-border-radius(0);
+  }
+
+  &_step-with-max-width {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 450px;
+  }
+
+  &_ajax-uploader {
+    margin-top: -90px;
+    position: absolute;
+    left: 0;
+    right: 0;
+
+    @media (max-width: @screen-xs-max) {
+      margin-top: -77px;
+    }
+
+    input[type=file] {
+      position: absolute;
+      left: -10000px;
+      top: -10000px;
+    }
+
+    .progress {
+      height: 24px;
+      font-size: 15px;
+      .m-text-shadow(rgba(0, 0, 0, 0.15));
+
+      .progress-bar-success {
+        box-shadow: none;
+        font-size: 15px;
+        .m-text-shadow(rgba(0, 0, 0, 0.5), 1px, 0, 5px);
+        padding-top: 1px;
+      }
+    }
+
+    .ajax-upload-form-button {
+      padding: 0;
+
+      &-red {
+        color: #000 !important;
+      }
+    }
+
+    .ajax-upload-form {
+      position: relative;
+
+      .col-xs-9 {
+        position: relative;
+        width: 100%;
+      }
+
+      .col-xs-3 {
+        position: absolute;
+        right: 0;
+        margin-right: 5px;
+
+        .ajax-upload-form-button-red {
+          color: red;
+          .m-text-shadow(rgba(255, 255, 255, 0.5), 1px, 0, 5px);
+        }
+      }
+    }
+  }
+
+  &_upload-form {
+    margin-top: -10px;
+    margin-bottom: 5px;
+    min-height: 25px;
+  }
+
+  .location-block {
+    &_map {
+      height: 220px;
+      margin: 15px 0;
+      .m-border-radius();
+      overflow: hidden;
+    }
+  }
+
+  .price-block {
+    text-align: center;
+
+    &_header {
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    &_amount {
+      font-size: 50px;
+      margin-bottom: 0;
+      padding-top: 6px;
+
+      small {
+        font-size: 28px;
+        padding-left: 5px;
+      }
+    }
+
+    &_guaranty-agreements {
+      text-align: left;
+      padding: 15px;
+      border-radius: 7px;
+      margin-top: 12px;
+      font-size: 13px;
+      background: #f7f7f7;
+      margin-bottom: 25px;
+
+      &_header {
+        font-weight: normal;
+        color: @brand-primary;
+        border-bottom: 1px solid;
+        padding-bottom: 4px;
+        margin-bottom: 10px;
+        display: inline-block;
+        font-size: 15px;
+      }
+
+      &_body {
+        ul {
+          padding-left: 17px;
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &_select-pay-type {
+      &_header {
+        margin-bottom: 3px;
+        font-size: 15px;
+      }
+
+      .btn-group {
+        min-width: 280px;
+        margin-bottom: 10px;
+
+        &_first,
+        &_last {
+          width: 50%;
+          padding-left: 25px;
+          padding-right: 25px;
+
+          &:hover, &:active, &:focus, &.active {
+            border-color: @brand-primary;
+            color: @brand-primary;
+          }
+        }
+
+        &_first {
+          .m-border-radius(20px 0 0 20px);
+        }
+
+        &_last {
+          .m-border-radius(0 20px 20px 0);
+        }
+      }
+    }
+  }
+
+  .search-engineer-block {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 5px;
+
+    &_header {
+      padding-top: 30px;
+      .lead;
+      margin-bottom: 15px;
+    }
+
+    &_actions {
+      padding-top: 15px;
+    }
+  }
+
+  .engineer-found-block {
+    text-align: center;
+
+    #i-engineer-found-block_canvas {
+      width: 290px;
+      height: 200px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    &_offset-y {
+      margin-top: -200px;
+    }
+
+    &_header {
+      .lead;
+      position: relative;
+      z-index: 1;
+      color: @brand-primary;
+      border-bottom: 1px solid;
+      display: inline-block;
+      padding-bottom: 3px;
+    }
+
+    &_engineer {
+      &-avatar {
+        padding-top: 25px;
+
+        img {
+          max-width: 175px;
+          position: relative;
+          .m-border-radius(50%);
+        }
+      }
+
+      &-name {
+        .lead;
+        padding-top: 5px;
+        padding-bottom: 15px;;
+      }
+    }
+
+    &_timer {
+      min-height: 47px;
+
+      &-value {
+        font-size: 32px;
+        vertical-align: middle;
+        padding-bottom: 5px;
+        padding-left: 5px;
+        display: inline-block;
+      }
+    }
+
+    &_actions {
+      padding-top: 10px;
+    }
+
+    &_additional-actions {
+      display: none;
+      margin-top: 25px;
+
+      &_action {
+        text-align: center;
+
+        &-name {
+          line-height: 1.25;
+          font-size: 13px;
+          display: inline-block;
+        }
+      }
+    }
+  }
+
+  .engineer-calling-block {
+    &_header {
+      .lead;
+      position: relative;
+      z-index: 1;
+      color: @brand-primary;
+      border-bottom: 1px solid;
+      display: inline-block;
+      padding-bottom: 3px;
+    }
+
+    &_calling-image {
+      text-align: center;
+      z-index: 0;
+      margin-top: -30px;
+
+      img {
+        width: 290px;
+        height: 268px;
+      }
+    }
+
+    &_actions {
+      text-align: center;
+      margin-top: -30px;
+    }
+  }
+
+  .request-info-block {
+    legend {
+      padding-bottom: 0;
+    }
+
+    &_actions {
+      padding-top: 10px;
+      text-align: center;
+    }
+  }
+
+  .request-done {
+    #i-request-done_canvas {
+      width: 290px;
+      height: 150px;
+      margin: 0 auto;
+      display: block;
+    }
+
+    &_offset-y {
+      margin-top: -150px;
+    }
+
+    &_price {
+      &-additional {
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        .badge {
+          background: #F0F0F0;
+          color: #000;
+          .m-text-shadow(#FFF);
+
+          .fa-rub {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+
+    &_engineer {
+      &-avatar {
+        img {
+          max-width: 175px;
+          position: relative;
+          .m-border-radius(50%);
+        }
+      }
+
+      &-name {
+        font-size: 15px;
+        padding-top: 5px;
+        padding-bottom: 15px;
+      }
+    }
+
+    &_rating {
+      padding-bottom: 5px;
+
+      &-bad {
+        display: none;
+        padding-top: 15px;
+      }
+
+      &-good {
+        display: none;
+        font-size: 15px;
+      }
+    }
+  }
+}
+
+
+// Страница регистрации инженера
+.engineer-registration {
+  .std-wrapper_header {
+    border-bottom: none 0;
+
+    h1 {
+      margin: 0;
+      padding: 45px 0;
+
+      @media (max-width: @grid-float-breakpoint-max) {
+        font-size: 29px;
+        padding: 30px 0;
+      }
+    }
+  }
+
+  &_pre-form-icon {
+    font-size: 60px;
+    line-height: 1;
+    padding-bottom: 15px;
+  }
+
+  &_roadmap {
+    background: @site-substrate;
+    padding-bottom: 15px;
+  }
+
+  &_block-with-icon {
+    text-align: center;
+
+    &_icon {
+      display: block;
+      font-size: 36px;
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+      border: 1px solid @brand-primary;
+      border-radius: 50%;
+      padding-top: 20px;
+      color: @brand-primary;
+    }
+
+    &_text {
+      display: block;
+      margin-top: 5px;
+      color: @brand-primary;
+
+      .badge {
+        margin-top: 4px;
+        background: @brand-primary;
+        .m-text-shadow(darken(@brand-primary, 5%));
+      }
+    }
+  }
+
+  &_vertical-line-separator {
+    height: 50px;
+    width: 1px;
+    background: @brand-primary;
+    margin: 15px auto;
+    display: block;
+  }
+
+  &_form {
+    max-width: 450px !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+// Стилизация стандартных таблиц данных
+.std-table_wrapper {
+  .table-responsive;
+
+  max-height: 70vh;
+}
+
+.std-table {
+  .table;
+  .table-condensed;
+  .table-bordered;
+  .table-hover;
+  font-size: 13px;
+  margin-bottom: 0;
+
+  > thead > tr > th {
+    background: #EEE;
+    border-bottom: none 0;
+  }
+
+  > thead > tr > th,
+  > tbody > tr > td {
+    vertical-align: middle;
+    padding: 3px;
+  }
+
+  &_nowrap {
+    white-space: nowrap;
+  }
+}
+
+
+// Таблица заявок
+.requests-table {
+  &_technic {
+    margin-bottom: 3px;
+  }
+
+  &_problem {
+    .text-muted;
+    max-height: 33px;
+    overflow: hidden;
+  }
+}
+
+
+// Для перечисления параметров чего-либо (вид "название: значени")
+.default-param {
+  margin-bottom: 7px;
+
+  &-name {
+    display: inline-block;
+    .text-muted;
+    font-size: 13px;
+    border-bottom: 1px solid #CCC;
+  }
+
+  &-value {
+    display: block;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .default-param {
+    &-name {
+      width: 150px;
+      text-align: right;
+      border-bottom: none 0;
+      margin-right: 15px;
+    }
+
+    &-value {
+      display: inline-block;
+      max-width: calc(~'100% - 170px');
+    }
+  }
+}
+
+
+// Превью заявки
+.request-preview {
+  display: block;
+  position: relative;
+  border: 1px solid @site-border-color;
+  .m-border-radius(5px);
+  padding: 15px;
+  margin-bottom: 15px;
+  .m-animate(all);
+  color: @site-text-color;
+
+  .fa-rub {
+    font-size: 85%;
+  }
+
+  &:hover, &:active, &:focus {
+    color: @site-text-color;
+    text-decoration: none;
+    background: #F0F0F0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @screen-sm-min) {
+    margin-bottom: 30px;
+  }
+}
+
+
+// Страница заявки у инженера
+.request {
+  &_params {
+    padding: 15px;
+  }
+
+  .fa-rub {
+    font-size: 85%;
+  }
+
+  &-forms {
+    margin: 0 auto;
+    border-top: 1px solid @site-border-color;
+    padding: 15px;
+    text-align: center;
+  }
+}
+
+
+// Страница настроек клиента
+.user-settings {
+  &-avatar {
+    padding-bottom: 1px;
+
+    &-progress-and-controls {
+      input[type=file] {
+        position: absolute;
+        left: -10000px;
+        top: -10000px;
+      }
+    }
+  }
+}

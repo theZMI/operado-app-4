@@ -1,0 +1,13 @@
+/**
+ * Не забудь поменять viewport в _main_tpl
+ */
+
+body {
+    min-width: 1150px;
+}
+
+.container,
+.fix-width {
+    width: 1150px !important;
+    max-width: none !important;
+}

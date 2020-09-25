@@ -1,0 +1,43 @@
+#page-404 {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  .page-404 {
+    &-icon {
+      .font-condensed;
+      display: block;
+      text-align: center;
+      font-size: 175px;
+      padding: 0;
+      line-height: 1;
+      color: #CCC;
+      .m-text-shadow(#AAA, -1px);
+      padding-bottom: 35px;
+      margin-bottom: 10px;
+    }
+
+    &-actions {
+      padding-top: 50px;
+    }
+
+    &-separator {
+      display: inline-block;
+      width: 15px;
+    }
+  }
+
+  .lead {
+    margin-bottom: 0;
+  }
+
+  @media (max-width: @screen-xs-max) {
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+    .page-404 {
+      &-icon {
+        font-size: 125px;
+      }
+    }
+  }
+}
