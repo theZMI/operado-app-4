@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ru" dir="ltr" class='is-usually-page'>
 <head>
+    <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval'; script-src * 'unsafe-inline' 'unsafe-eval'; connect-src * 'unsafe-inline'; img-src * data: blob: 'unsafe-inline'; frame-src *; style-src * 'unsafe-inline';">
     
     <!-- Document charset -->
     <meta charset="utf-8"/>
@@ -51752,17 +51753,13 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
                 });
             };
             RequestForm.prototype.initAllForms = function () {
-                alert('init all forms');
                 var request_id = GetURLParameter('id');
                 $('[name="request_id"]').val(request_id);
                 var step = GetURLParameter('step') || 1;
-                alert('step #' + step);
                 $('#many-panels-form-panel_' + step).removeClass('hidden');
                 $('#request-form_loader').hide();
-                alert('finish!');
             };
             RequestForm.prototype.init = function (ymaps) {
-                alert('we must init all...');
                 this.initAllForms();
                 this.initFormStep1();
                 this.initFormStep2();
@@ -54474,9 +54471,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
         var requestForm = new RequestForm();
 
         $(function () {
-            alert('me here?');
-            requestForm.init({});
-            alert('me here 2?');
+            requestForm.init(ymaps);
         });
     </script>
 
@@ -54605,7 +54600,7 @@ License: https://github.com/ashleydw/lightbox/blob/master/LICENSE
 <body id="web-pull-to-refresh">
 <a href="#content" class="sr-only">Перейти к содержимому страницы</a>
 
-<a href="/test.html" data-toggle="lightbox">TEST AJAX</a>
+<a href="https://operado.ru/api/public/api/v1.0/tests/ping" data-toggle="lightbox">TEST AJAX</a>
 
 <div id="ptr">
     <div class="pull-notificator">
