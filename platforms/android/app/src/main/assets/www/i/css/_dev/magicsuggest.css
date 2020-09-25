@@ -1,0 +1,323 @@
+/**
+ * Multiple Selection Component for Bootstrap
+ * Check nicolasbize.github.io/magicsuggest/ for latest updates.
+ *
+ * Author:       Nicolas Bize
+ * Created:      Feb 8th 2013
+ * Last Updated: Oct 16th 2014
+ * Version:      2.1.4
+ * Licence:      MagicSuggest is licenced under MIT licence (http://opensource.org/licenses/MIT)
+ */
+.ms-ctn {
+    position: relative;
+    padding: 5px 12px;
+    height: auto;
+}
+
+.ms-inv {
+    border: 1px solid #CC0000;
+}
+
+.ms-ctn-readonly {
+    cursor: pointer;
+}
+
+.ms-ctn-disabled {
+    cursor: not-allowed;
+    background-color: #eeeeee;
+}
+
+.ms-ctn-bootstrap-focus,
+.ms-ctn-bootstrap-focus .ms-res-ctn {
+    border-color: rgba(82, 168, 236, 0.8) !important;
+    /* IE6-9 */
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6) !important;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    border-color: #66afe9;
+    box-shadow: 0 0 0 0.2rem rgba(102, 175, 233, 0.25);
+}
+
+.ms-ctn-focus {
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 8px rgba(102, 175, 233, .6);
+
+    border-color: #66afe9;
+    box-shadow: 0 0 0 0.2rem rgba(102, 175, 233, 0.25);
+}
+
+.ms-ctn input {
+    border: 0;
+    box-shadow: none;
+    -webkit-transition: none;
+    outline: none;
+    display: block;
+    padding: 0;
+    line-height: 1.42857143;
+    margin: 1px 0;
+    width: 100%;
+}
+
+.ms-ctn .ms-sel-ctn input {
+    float: left;
+}
+
+.ms-ctn-disabled input {
+    cursor: not-allowed;
+    background-color: #eeeeee;
+}
+
+.ms-ctn .ms-input-readonly {
+    cursor: pointer;
+}
+
+.ms-ctn .ms-empty-text {
+    color: #DDD;
+}
+
+.ms-ctn input:focus {
+    border: 0;
+    box-shadow: none;
+    -webkit-transition: none;
+    background: #FFF;
+}
+
+.ms-ctn input::-ms-clear {
+    width: 0;
+    height: 0;
+}
+
+.ms-ctn .ms-trigger {
+    top: 0;
+    width: 25px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    background: transparent;
+    border-left: 1px solid #CCC;
+    cursor: pointer;
+}
+
+.ms-ctn .ms-trigger .ms-trigger-ico {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: top;
+    border-top: 4px solid #333;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    content: "";
+    margin-left: 8px;
+    margin-top: 15px;
+}
+
+.ms-ctn .ms-trigger:hover {
+    background-color: #e6e6e6;
+}
+
+.ms-ctn .ms-trigger:hover .ms-trigger-ico {
+    background-position: 0 -4px;
+}
+
+.ms-ctn-disabled .ms-trigger {
+    cursor: not-allowed;
+    background-color: #eeeeee;
+}
+
+.ms-ctn-bootstrap-focus {
+    border-bottom: 1px solid #CCC;
+}
+
+.ms-res-ctn {
+    width: 100%;
+    display: block;
+    overflow-y: auto;
+}
+
+.ms-res-ctn .ms-res-group {
+    line-height: 23px;
+    text-align: left;
+    padding: 2px 5px;
+    font-weight: bold;
+    border-bottom: 1px dotted #CCC;
+    border-top: 1px solid #CCC;
+    background: #f3edff;
+    color: #333;
+}
+
+.ms-res-ctn .ms-res-item {
+    line-height: 25px;
+    text-align: left;
+    padding: 2px 5px;
+    color: #666;
+    cursor: pointer;
+}
+
+.ms-res-ctn .ms-res-item-grouped {
+    padding-left: 15px;
+}
+
+.ms-res-ctn .ms-res-odd {
+    background: #FAFAFA;
+}
+
+.ms-res-ctn .ms-res-item-active {
+    background-color: #F5F5F5;
+}
+
+.ms-res-ctn .ms-res-item-disabled {
+    color: #CCC;
+    cursor: default;
+}
+
+.ms-sel-ctn {
+    overflow: auto;
+    line-height: 18px;
+    padding-right: 25px;
+}
+
+.ms-no-trigger .ms-sel-ctn {
+    padding-right: 0;
+}
+
+/** Outer and global tags **/
+.ms-sel-ctn .ms-sel-item {
+    background: #F3F3F3;
+    color: #999;
+    float: left;
+    font-size: 12px;
+    padding: 3px 5px;
+    border-radius: 3px;
+    border: 1px solid #DDD;
+    margin: 3px 0px 1px 0;
+}
+
+.ms-sel-ctn .ms-sel-invalid {
+    border-color: rgb(248, 165, 165) !important;
+    background: #FDF2F2 !important;
+}
+
+.ms-sel-ctn .ms-sel-item:hover {
+    border: 1px solid #BBB;
+}
+
+/** For inner tags **/
+.ms-ctn .ms-sel-item {
+    background: #F3F3F3;
+    color: #999;
+    float: left;
+    font-size: 12px;
+    padding: 0 5px;
+    border-radius: 3px;
+    border: 1px solid #DDD;
+    margin: 1px 5px 1px 0;
+}
+
+.ms-ctn .ms-sel-item:hover {
+    border: 1px solid transparent;
+}
+
+.ms-ctn-focus .ms-sel-item:hover {
+    border: 1px solid #BBB;
+}
+
+.ms-sel-ctn .ms-sel-text {
+    background: #FFF;
+    color: #666;
+    padding-right: 0;
+    margin-left: 0;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.ms-as-string .ms-sel-text {
+    border-color: transparent;
+}
+
+.ms-res-ctn .ms-res-item em {
+    font-style: normal;
+    background: #565656;
+    color: #FFF;
+}
+
+.ms-sel-ctn .ms-sel-text:hover {
+    background: #FFF;
+}
+
+.ms-sel-ctn .ms-sel-item-active {
+    border: 1px solid red;
+    background: #757575;
+}
+
+.ms-stacked .ms-sel-item {
+    float: inherit;
+}
+
+.ms-sel-ctn .ms-sel-item .ms-close-btn {
+    width: 7px;
+    cursor: pointer;
+    height: 7px;
+    float: right;
+    margin: 6px 2px 0 10px;
+    background-image: url('/i/image/_dev/magicsuggest/x.jpg');
+    background-position: 0 -7px;
+}
+
+.ms-sel-ctn .ms-sel-item .ms-close-btn:hover {
+    background-position: 0 0;
+}
+
+.ms-stacked .ms-sel-item .ms-close-btn {
+    margin-left: 0px;
+}
+
+.ms-helper {
+    color: #AAA;
+    font-size: 10px;
+    position: absolute;
+    top: -17px;
+    right: 0;
+}
+
+.ms-ctn.input-lg .ms-trigger .ms-trigger-ico {
+    margin-top: 17px
+}
+
+.ms-ctn.input-sm .ms-trigger .ms-trigger-ico {
+    margin-top: 13px
+}
+
+.ms-ctn.input-lg .ms-sel-ctn .ms-sel-item {
+    padding-top: 2px;
+    padding-bottom: 3px;
+}
+
+.ms-ctn.input-sm .ms-sel-ctn {
+    line-height: 15px;
+}
+
+.ms-ctn.input-sm .ms-sel-ctn .ms-sel-item {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.ms-ctn.input-sm .ms-sel-ctn .ms-sel-item .ms-close-btn {
+    margin-top: 4px;
+}
+
+.ms-ctn .ms-sel-ctn {
+    margin-left: -7px;
+}
+
+.ms-ctn .ms-trigger:hover {
+    width: 24px;
+    right: 1px;
+    border-radius: 0 3px 3px 0;
+}

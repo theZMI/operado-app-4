@@ -1,0 +1,12 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Operado",
+  "short_name": "Operado",
+  "version": "com.phonegap.operado",
+  "description": "Operado - Заказать ремонт бытовой техники теперь так же просто, как вызвать такси!",
+  "author": "theZMI",
+  "icons": [],
+  "start_url": "index.html",
+  "theme_color": "#000000"
+}

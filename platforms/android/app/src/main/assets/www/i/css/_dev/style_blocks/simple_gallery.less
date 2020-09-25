@@ -1,0 +1,34 @@
+
+.simple-gallery {
+  &-block {
+    text-align: center;
+    display: inline-block;
+
+    img {
+      .m-border-radius(@border-radius-base);
+      .m-animate(all);
+    }
+
+    .name {
+      display: block;
+      text-align: center;
+      padding-top: 6px;
+    }
+
+    &:hover, &:active, &:focus {
+      text-decoration: none;
+
+      img {
+        .m-box-shadow(rgba(0, 0, 0, 0.35), 15px, 5px);
+      }
+    }
+  }
+
+  &-actions {
+    height: 52px;
+
+    .btn-link {
+      padding-right: 0;
+    }
+  }
+}

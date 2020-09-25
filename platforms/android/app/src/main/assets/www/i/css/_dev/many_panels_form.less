@@ -1,0 +1,61 @@
+// Иконки над многошаговой формой
+.form-steps {
+  text-align: center;
+  margin-top: 15px;
+
+  a {
+    font-size: 14px;
+    color: #DDD;
+    border: 1px solid #EEE;
+    padding: 1px;
+    width: 26px;
+    height: 26px;
+    display: inline-block;
+    .m-border-radius(50%);
+
+    &:hover {
+      color: #333;
+      border-color: #AAA;
+    }
+  }
+
+  small {
+    margin: 0 10px;
+    padding: 0 10px;
+    border-top: 1px solid #EEE;
+    font-size: 5px;
+  }
+
+  a.pass {
+    border-color: #EEE;
+
+    &:hover {
+      border-color: #EEE;
+    }
+  }
+
+  a.active {
+    color: #333;
+    border-color: #AAA;
+  }
+}
+
+// Панель с кнопками "Назад" и "Далее"
+.prev-next-buttons {
+  text-align: center;
+  height: 56px;
+  padding-top: 15px;
+
+  .btn-prev {
+    padding-left: 0;
+    float: left;
+  }
+
+  .btn-next {
+    float: right
+  }
+}
+
+.one-panel {
+  position: relative;
+}

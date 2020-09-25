@@ -1,0 +1,59 @@
+// Группа контролов
+.b3-one-group {
+  margin-top: 40px;
+  position: relative;
+
+  legend,
+  .b3-one-group-legend {
+    margin-bottom: 0;
+    border: none 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+
+    .b3-one-group-head {
+      .badge;
+      display: inline-block;
+      background: #333;
+      font-size: 11px;
+      color: #FFF;
+      vertical-align: top;
+      text-transform: none;
+      .m-text-shadow(#000);
+      position: absolute;
+      top: -9px;
+      left: 0;
+    }
+
+    .b3-one-group-info-label {
+      left: auto;
+      right: 0;
+    }
+  }
+
+  .b3-one-group-body {
+    padding: 30px 0;
+
+    &-without-spaces {
+      padding: 0 !important;
+    }
+  }
+
+  &-with-borders {
+    .m-border-radius(6px);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    legend,
+    .b3-one-group-legend {
+      border: none 0;
+    }
+
+    .b3-one-group-body {
+      padding: 30px;
+    }
+  }
+
+  &-last {
+    .b3-one-group-body {
+      padding-bottom: 0;
+    }
+  }
+}

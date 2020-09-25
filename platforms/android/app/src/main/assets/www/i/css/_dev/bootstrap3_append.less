@@ -1,0 +1,433 @@
+// *** Alerts ***
+.alert {
+  padding: 15px;
+  margin-bottom: 15px;
+  border: none;
+  .m-border-radius(@border-radius-base);
+  position: relative;
+
+  .alert-icon {
+    padding-left: 3px;
+    padding-right: 14px;
+    display: none;
+  }
+}
+
+.alert-info {
+  color: #00a3ff;
+}
+
+.alert-success {
+  color: #269703;
+  background: #e2fcda;
+}
+
+.alert-warning {
+  color: #ae5a00;
+  background: #ffead3;
+}
+
+.alert-danger {
+  color: #8b0000;
+  background: #ffd9d9;
+}
+
+
+// *** Badges ***
+.badge {
+  background: #333;
+  font-weight: bold;
+  font-size: 11px;
+  color: #FFF;
+  vertical-align: top;
+  text-transform: none;
+  .m-text-shadow(#000);
+  .font-standart;
+  word-spacing: normal;
+  letter-spacing: normal;
+
+  &-without-right-margin {
+    margin-right: 0 !important;
+  }
+
+  &-red {
+    background: red;
+    .m-text-shadow(red);
+  }
+}
+
+
+// *** Labels (делаем их похожими на badges)
+.label {
+  padding: 3px 7px;
+  .m-border-radius(10px);
+  display: inline-block;
+  font-weight: bold;
+  font-size: 11px;
+  color: #FFF;
+  vertical-align: top;
+  text-transform: none;
+  text-shadow: none;
+  .font-standart;
+  word-spacing: normal;
+  letter-spacing: normal;
+}
+
+
+// *** Buttons ***
+// Выделение кнопкок и ссылок по фокусу
+.b3-unfocus() {
+  outline: none !important;
+
+  &:focus,
+  &:active,
+  &:hover {
+    outline: none; // Пока убрал, извиняюсь...
+  }
+}
+
+a,
+.btn {
+  .b3-unfocus();
+  font-weight: normal;
+  text-transform: none;
+}
+
+
+// Кнопка с минимальной шириной
+.btn-min-width {
+  min-width: 200px;
+
+  @media (max-width: @screen-xs-max) {
+    min-width: 140px;
+  }
+}
+
+
+// Кнопка с закруглёнными краями
+.btn-rounded {
+  .m-border-radius(20px);
+}
+
+
+// Без отступа слева (подходит когда btn-link прижал влево)
+.btn-without-left-padding {
+  padding-left: 0 !important;
+}
+
+
+// Без отступа справа (подходит когда btn-link прижал вправо)
+.btn-without-right-padding {
+  padding-right: 0 !important;
+}
+
+
+// Без отступа снизу (подходит когда btn-link прижал влево)
+.btn-without-bottom-padding {
+  padding-bottom: 0 !important;
+}
+
+
+// Без отступа сверху (подходит когда btn-link прижал вправо)
+.btn-without-top-padding {
+  padding-top: 0 !important;
+}
+
+.btn-default,
+.btn-default:hover,
+.btn-default:focus,
+.btn-default:disabled,
+.btn-default:active,
+.btn-default.active,
+.btn-default.disabled,
+.open > .dropdown-toggle.btn-default {
+  color: @brand-primary;
+  background: transparent;
+  border-color: @brand-primary;
+  text-shadow: none;
+  .m-animate(all);
+
+  &:hover, &:active, &:focus {
+  }
+}
+
+.btn-primary,
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:disabled,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.disabled,
+.open > .dropdown-toggle.btn-primary {
+  background: @brand-primary;
+  border-color: @brand-primary;
+  color: #FFF;
+  text-shadow: none;
+}
+
+.btn-primary:disabled,
+.btn-primary.disabled,
+.btn-primary[disabled] {
+  border-color: rgba(0, 0, 0, 0.15);
+  color: #777;
+  background: url("/i/image/ps_neutral.png") left top repeat !important;
+  .m-opacity(1);
+}
+
+.btn-warning,
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:disabled,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.disabled,
+.open > .dropdown-toggle.btn-warning {
+  background: #ff6600;
+  //.m-gradient(#ff9e36, #ff6600);
+  border-color: #E25A00;
+  .m-text-shadow(#E25A00, -1px);
+}
+
+.btn-danger,
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger:disabled,
+.btn-danger.active,
+.btn-danger.disabled,
+.open > .dropdown-toggle.btn-danger {
+  background: transparent;
+  border-color: #db0000;
+  color: #db0000;
+  text-shadow: none;
+}
+
+.btn-success,
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success:disabled,
+.btn-success.active,
+.btn-success.disabled,
+.open > .dropdown-toggle.btn-success {
+  background: #36C10B;
+  // .m-gradient(#5eea35, #36C10B);
+  border-color: #299e57;
+  .m-text-shadow(#299e57, -1px);
+}
+
+.btn-info,
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info:disabled,
+.btn-info.active,
+.btn-info.disabled,
+.open > .dropdown-toggle.btn-info {
+  background: #00a8ff;
+  // .m-gradient(#00D0FF, #00a8ff);
+  border-color: #0098E5;
+  .m-text-shadow(#0098E5, -1px);
+}
+
+// Иконки с отступом
+.btn {
+  .icon-left {
+    padding-right: 10px;
+  }
+
+  .icon-right {
+    padding-left: 10px;
+  }
+}
+
+// Размеры кнопок
+.btn-lg {
+  font-size: 15px;
+}
+
+
+// Круглая кнопка
+.btn-circle {
+  margin: 0;
+  padding: 15px 17px;
+  .m-border-radius(50%);
+
+  .fa {
+    width: 15px;
+    height: 15px;
+  }
+
+  &.btn-sm {
+    padding: 3px 7px;
+  }
+}
+
+.btn-circle-wrapper {
+  height: 55px;
+}
+
+
+// *** Code ***
+pre {
+  .m-text-shadow(rgba(255, 255, 255, 0.75), -1px);
+  font-size: 12px;
+}
+
+kbd {
+  .m-text-shadow(rgba(0, 0, 0, 0.15));
+}
+
+
+// *** Headers ***
+h3, h4, h5,
+.h3, .h4, .h5 {
+  .font-standart;
+}
+
+
+// *** Modals ***
+/*
+// Окна по центру (вернтикально)
+.modal {
+  text-align: center;
+  padding: 0!important;
+}
+
+.modal:before {
+  content: '';
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  margin-right: -4px;
+}
+
+.modal-dialog {
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+}
+*/
+// Стили и full-window на маленьких экранах
+.modal-dialog {
+  margin: 60px auto;
+  max-width: 750px;
+
+  .modal-content {
+    .m-box-shadow(rgba(0, 0, 0, 0.3), 100px, 15px);
+
+    .modal-header,
+    .modal-footer {
+      background: #FFF;
+      .m-text-shadow(#FFF);
+    }
+
+    .modal-header {
+      // padding: 23px 15px 18px 15px;
+      padding: 15px 15px 10px 15px;
+      .m-border-radius(@border-radius-base @border-radius-base 0 0);
+      border-bottom-color: @site-border-color;
+
+      .modal-title {
+        .font-standart;
+        line-height: 1;
+        font-size: 20px;
+        word-spacing: 2px;
+        margin-bottom: 4px;
+      }
+
+      .close {
+        margin-top: 0;
+      }
+    }
+
+    .modal-body {
+      padding: 0;
+
+      .close {
+        position: absolute;
+        top: 8px;
+        right: 15px;
+        font-size: 32px;
+        .m-opacity(1);
+      }
+    }
+
+    .modal-footer {
+      padding: 15px;
+      .m-border-radius(0 0 @border-radius-base @border-radius-base);
+    }
+  }
+}
+
+// @media (max-width: @screen-xs-max)
+// {
+.modal-dialog {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+
+  .modal-content {
+    max-width: 100%;
+    min-height: 100%;
+    height: auto;
+    border: none 0;
+    .m-border-radius(0);
+
+    .modal-body {
+      min-height: 100vh;
+    }
+
+    .by-center-of-modal-window {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      width: 100%;
+      padding: 0 15px;
+    }
+  }
+}
+
+// }
+
+body.modal-open {
+  position: relative;
+}
+
+
+// *** Forms ***
+.tooltip {
+  .m-text-shadow(rgba(0, 0, 0, 0.25));
+}
+
+label {
+  font-weight: normal;
+}
+
+.form-control {
+  box-shadow: none;
+  color: #000;
+}
+
+.input-group-btn:first-child > .btn,
+.input-group-btn:first-child > .btn-group,
+.input-group-btn:last-child > .btn,
+.input-group-btn:last-child > .btn-group {
+  z-index: 3;
+}
+
+.btn-group {
+  .btn-default {
+    color: #000;
+    border-color: @site-border-color;
+
+    &.active {
+      color: @brand-primary;
+      border-color: @brand-primary;
+    }
+  }
+}

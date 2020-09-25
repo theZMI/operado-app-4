@@ -1,0 +1,63 @@
+.form-signin {
+  margin: 0 auto;
+
+  .form-signin-heading {
+    margin-bottom: 15px;
+  }
+
+  .checkbox {
+    font-weight: normal;
+    margin-bottom: 10px;
+  }
+
+  .one-elem {
+    padding: 0;
+    margin: 0;
+
+    .input-group-addon {
+      .fa {
+        width: 20px;
+      }
+    }
+
+    input {
+      margin: 0;
+      position: relative;
+      font-size: 16px;
+      height: auto;
+      padding: 10px;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+
+      &:focus {
+        z-index: 2;
+      }
+    }
+  }
+
+  .one-elem-top {
+    .input-group-addon {
+      .m-border-radius(@border-radius-base 0 0 0);
+    }
+
+    input {
+      .m-border-radius(0 @border-radius-base 0 0);
+    }
+  }
+
+  .one-elem-bottom {
+    .input-group-addon {
+      .m-border-radius(0 0 0 @border-radius-base);
+    }
+
+    input {
+      .m-border-radius(0 0 @border-radius-base 0);
+    }
+  }
+
+  .btn-go {
+    margin-top: 32px;
+    height: 50px;
+  }
+}

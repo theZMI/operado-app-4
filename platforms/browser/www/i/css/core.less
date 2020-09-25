@@ -1,0 +1,23 @@
+body {
+  // Параграфы
+  p {
+    // Включаем переносы слов
+    -moz-hyphens: manual;
+    -webkit-hyphens: manual;
+    -ms-hyphens: manual;
+    hyphens: manual;
+  }
+}
+
+.text-overflow {
+  .text-overflow();
+}
+
+// Другой тип focus-выделяния при клике на input (стиль как в bootstrap 4)
+.form-control,
+.has-error .form-control {
+  &:focus {
+    border-color: @input-border-focus;
+    box-shadow: 0 0 0 0.2rem rgba(102, 175, 233, 0.25);
+  }
+}
